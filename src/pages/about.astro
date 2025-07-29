@@ -1,0 +1,41 @@
+﻿---
+import "../styles/global.css"
+import Header from '../components/Header.astro';
+---
+
+<html lang="en" class="bg-[#141414] text-white font-['Fira_Code']">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About | KyfStore11k</title>
+    <meta name="description" content="Learn more about KyfStore11k — programmer, game designer, and gamer." />
+    <link rel="icon" href="/favicon.svg" />
+</head>
+<body class="min-h-screen p-6 relative">
+<Header />
+
+<main class="max-w-4xl mx-auto mt-24 p-6 bg-[#1e1e1e] rounded-lg shadow-lg backdrop-blur-md border border-red-700">
+    <h1 class="text-4xl font-bold text-red-500 mb-6 drop-shadow-lg">About Me</h1>
+
+    <p class="text-gray-300 mb-4 leading-relaxed">
+        Hey there! I'm <span class="text-red-500 font-semibold">KyfStore11k</span>, an intermediate game designer, advanced programmer, and passionate gamer.
+        I love crafting immersive game systems, writing clean code, and sharing my projects with the community.
+    </p>
+
+    <p class="text-gray-300 mb-4 leading-relaxed">
+        Over the years, I've honed my skills in programming languages and game engines, constantly pushing to build fun, interactive experiences. When I’m not coding, you can find me exploring the latest games or brainstorming new ideas for my next project.
+    </p>
+
+    <p class="text-gray-300 mb-6 leading-relaxed">
+        This site is my hub to showcase what I’m working on, connect with fellow developers and gamers, and share useful resources.
+        Thanks for visiting — I’d love to hear from you, so feel free to reach out via the links on my homepage!
+    </p>
+
+    <a href="/" class="inline-block text-red-600 font-semibold hover:text-red-400 transition underline">
+        ← Back to Home
+    </a>
+</main>
+
+<div class="fixed bottom-10 right-10 w-48 h-48 bg-gradient-to-tr from-red-700 via-pink-600 to-purple-700 opacity-20 rounded-full blur-3xl animate-pulse -z-10"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿# Node.js
+node_modules/
+.build/
+.cache/
+
+# pnpm
+.pnpm-debug.log
+.pnpm-store/
+
+# dotenv
+.env
+.env.local
+.env.*.local
+
+# Editor/OS
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Optional: Astro SSR adapters
+functions/
+netlify/functions/
+vercel/

@@ -1,0 +1,159 @@
+---
+import "../styles/global.css"
+import Header from "../components/Header.astro"
+---
+
+<html lang="en" class="bg-[#0f0f0f] text-white font-['Fira_Code']">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KyfStore11k's Page</title>
+    <meta name="description" content="Explore KyfStore11k's official page featuring programming projects, game design work, and social links. Connect, collaborate, and follow the tech journey of an aspiring game designer and developer." />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <meta name="theme-color" content="#0f0f0f" />
+    <style>
+        /* Animations from 404 page */
+        @keyframes fade-in-up {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fade-in-delayed {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes spin-slow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
+        .animate-fade-in-up {
+            animation: fade-in-up 1s ease-out forwards;
+        }
+
+        .animate-fade-in-delayed {
+            animation: fade-in-delayed 1.3s ease-out forwards;
+        }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 3s infinite ease-in-out;
+        }
+
+        .animate-spin-slow {
+            animation: spin-slow 20s linear infinite;
+        }
+
+        .glow-bg-top {
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(ellipse at center, rgba(239, 68, 68, 0.15), transparent 70%);
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.1;
+            z-index: -10;
+            animation: pulse 6s infinite;
+        }
+
+        .glow-bg-bottom {
+            position: absolute;
+            bottom: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(ellipse at center, rgba(220, 38, 38, 0.1), transparent 70%);
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.07;
+            z-index: -10;
+            animation: ping 8s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.25; }
+        }
+
+        @keyframes ping {
+            0% { transform: scale(1); opacity: 0.1; }
+            50% { transform: scale(1.1); opacity: 0.15; }
+            100% { transform: scale(1); opacity: 0.1; }
+        }
+
+        h1, h2 {
+            text-shadow:
+                    0 0 8px #ef4444,
+                    0 0 20px #dc2626;
+        }
+
+        a.block {
+            box-shadow:
+                    0 0 8px rgba(239, 68, 68, 0.3);
+            transition:
+                    box-shadow 0.3s ease,
+                    background-color 0.3s ease,
+                    border-color 0.3s ease,
+                    transform 0.3s ease;
+        }
+
+        a.block:hover {
+            box-shadow:
+                    0 0 15px #ef4444,
+                    0 0 30px #dc2626;
+            background-color: #2a2a2a;
+            border-color: #ef4444;
+            transform: scale(1.05) rotate(-1deg);
+        }
+    </style>
+</head>
+
+<body class="p-6 min-h-screen flex flex-col items-center justify-center space-y-8 relative overflow-hidden">
+
+<Header />
+
+<div class="glow-bg-top"></div>
+<div class="glow-bg-bottom"></div>
+
+<div class="text-center space-y-4 animate-fade-in-up max-w-3xl">
+    <h1 class="text-4xl md:text-5xl font-bold drop-shadow-md">
+        KyfStore11k Links
+    </h1>
+    <p class="text-md md:text-lg text-gray-400 max-w-2xl mx-auto animate-fade-in-delayed">
+        Welcome to my page! I'm KyfStore11k — an experienced programmer, aspiring game designer, and tech enthusiast. I specialize in building interactive projects, developing game systems, and sharing content with a growing online audience. Below, you'll find links to my work, profiles, and platforms where you can follow, collaborate, or reach out. Thanks for stopping by!
+    </p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl animate-fade-in-delayed">
+    <div>
+        <h2 class="text-red-400 font-semibold text-lg mb-2">General Pages:</h2>
+        <a href="https://direct.me/kyfstore" class="block px-5 py-4 rounded-lg bg-[#1e1e1e] border border-transparent shadow-md">My Direct Me</a>
+        <a href="https://guns.lol/kyfstore" class="block px-5 py-4 rounded-lg bg-[#1e1e1e] border border-transparent shadow-md">My Guns.lol Page</a>
+        <a href="https://kyfstore.carrd.co/" class="block px-5 py-4 rounded-lg bg-[#1e1e1e] border border-transparent shadow-md">My Carrd.co Page</a>
+        <a href="https://central.sonatype.com/namespace/com.kyfstore" class="block px-5 py-4 rounded-lg bg-[#1e1e1e] border border-transparent shadow-md hover:border-red-500 hover:bg-[#2a2a2a] transition duration-300">
+            My Maven Central (Sonatype) Repo
+        </a>
+    </div>
+
+    <div>
+        <h2 class="text-red-400 font-semibold text-lg mb-2">Social:</h2>
+        <a href="https://github.com/KyfStore11k" class="block px-5 py-4 rounded-lg bg-[#1e1e1e] border border-transparent shadow-md">My GitHub</a>
+        <a href="https://kyfstore.com/" class="block px-5 py-4 rounded-lg bg-[#1e1e1e] border border-transparent shadow-md">My Website</a>
+        <a href="https://youtube.com/@KyfStore" class="block px-5 py-4 rounded-lg bg-[#1e1e1e] border border-transparent shadow-md">My YouTube Channel</a>
+        <a href="https://instagram.com/kyfstore12k" class="block px-5 py-4 rounded-lg bg-[#1e1e1e] border border-transparent shadow-md">My Instagram</a>
+    </div>
+</div>
+
+</body>
+</html>

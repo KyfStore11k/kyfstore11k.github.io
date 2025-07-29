@@ -1,0 +1,25 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ff4d4d" />
+            <stop offset="100%" stop-color="#b30000" />
+        </linearGradient>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <rect width="100%" height="100%" fill="#1a1a1a" rx="20" />
+
+    <text x="50%" y="20%" dominant-baseline="middle" text-anchor="middle" fill="url(#redGradient)" font-size="18" font-family="monospace">KyfStore11k</text>
+
+    <g filter="url(#glow)">
+        <polyline points="60,100 40,80 60,60" stroke="url(#redGradient)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="140,100 160,80 140,60" stroke="url(#redGradient)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="90" y1="50" x2="110" y2="150" stroke="url(#redGradient)" stroke-width="6" stroke-linecap="round"/>
+    </g>
+</svg>
